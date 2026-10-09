@@ -28,7 +28,7 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		return (0);
 	start_struct(&data);
-	return (0);
+	parser(ac, av, &data);
 	if(!is_sorted(&data))
 	{
 		if(data.size_a == 2)
@@ -38,4 +38,6 @@ int	main(int ac, char **av)
 		else if (data.size_a <= 5)
 			sort_five(&data);
 	}
+	free_data(&data);
+	return (0);
 }

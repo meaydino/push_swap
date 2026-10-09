@@ -56,4 +56,35 @@ void	sort_five(t_data *data)
 	while (data->size_b > 0)
 		pa(data);
 }
+int	min_index(int *arr, int size)
+{
+	int	index;
+	int	i;
+
+	index = 0;
+	i = 1;
+	while (i < size)
+	{
+		if (arr[i] < arr[index])
+			index = i;
+		i++;
+	}
+	return (index);
+}
+
+int	max_index(int *arr, int size)
+{
+	int	index;
+	int	i;
+
+	index = 0;
+	i = 1;
+	while (i < size)
+	{
+		if (arr[i] > arr[index])
+			index = i;
+		i++;
+	}
+	return (index);
+}
 
