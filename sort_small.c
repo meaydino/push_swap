@@ -17,6 +17,7 @@ void	sort_two(t_data *data)
 	if (data->size_a == 2 && data->a[0] > data->a[1])
 		sa(data);
 }
+
 void	sort_three(t_data *data)
 {
 	int	index;
@@ -56,6 +57,7 @@ void	sort_five(t_data *data)
 	while (data->size_b > 0)
 		pa(data);
 }
+
 int	min_index(int *arr, int size)
 {
 	int	index;
@@ -87,4 +89,3 @@ int	max_index(int *arr, int size)
 	}
 	return (index);
 }
-

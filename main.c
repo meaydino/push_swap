@@ -29,9 +29,9 @@ int	main(int ac, char **av)
 		return (0);
 	start_struct(&data);
 	parser(ac, av, &data);
-	if(!is_sorted(&data))
+	if (!is_sorted(&data))
 	{
-		if(data.size_a == 2)
+		if (data.size_a == 2)
 			sort_two(&data);
 		else if (data.size_a == 3)
 			sort_three(&data);
