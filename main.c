@@ -29,4 +29,13 @@ int	main(int ac, char **av)
 		return (0);
 	start_struct(&data);
 	return (0);
+	if(!is_sorted(&data))
+	{
+		if(data.size_a == 2)
+			sort_two(&data);
+		else if (data.size_a == 3)
+			sort_three(&data);
+		else if (data.size_a <= 5)
+			sort_five(&data);
+	}
 }

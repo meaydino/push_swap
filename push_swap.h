@@ -27,4 +27,11 @@ typedef struct s_data
 	int	total;
 }	t_data;
 
+int		is_sorted(t_data *data);
+void	sort_two(t_data *data);
+void	sort_three(t_data *data);
+void	sort_five(t_data *data);
+
+
+
 #endif
