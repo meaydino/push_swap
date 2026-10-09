@@ -25,7 +25,7 @@ SRCS		= main.c \
 			  rotate.c \
 			  rev_rotate.c \
 			  sort_small.c \
-
+			  chunk_sort.c
 
 OBJS		= $(SRCS:.c=.o)
 
