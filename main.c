@@ -37,6 +37,8 @@ int	main(int ac, char **av)
 			sort_three(&data);
 		else if (data.size_a <= 5)
 			sort_five(&data);
+		else
+			sort_chunk(&data);
 	}
 	free_data(&data);
 	return (0);
