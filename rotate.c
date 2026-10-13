@@ -44,12 +44,3 @@ void	rb(t_data *data)
 	shift_up(data->b, data->size_b);
 	write(1, "rb\n", 3);
 }
-
-void	rr(t_data *data)
-{
-	if (data->size_a < 2 && data->size_b < 2)
-		return ;
-	shift_up(data->a, data->size_a);
-	shift_up(data->b, data->size_b);
-	write(1, "rr\n", 3);
-}

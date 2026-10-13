@@ -23,34 +23,3 @@ void	sa(t_data *data)
 	data->a[1] = tmp;
 	write(1, "sa\n", 3);
 }
-
-void	sb(t_data *data)
-{
-	int	tmp;
-
-	if (data->size_b < 2)
-		return ;
-	tmp = data->b[0];
-	data->b[0] = data->b[1];
-	data->b[1] = tmp;
-	write(1, "sb\n", 3);
-}
-
-void	ss(t_data *data)
-{
-	int	tmp;
-
-	if (data->size_a >= 2)
-	{
-		tmp = data->a[0];
-		data->a[0] = data->a[1];
-		data->a[1] = tmp;
-	}
-	if (data->size_b >= 2)
-	{
-		tmp = data->b[0];
-		data->b[0] = data->b[1];
-		data->b[1] = tmp;
-	}
-	write(1, "ss\n", 3);
-}
