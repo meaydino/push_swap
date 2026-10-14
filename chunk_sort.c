@@ -49,21 +49,21 @@ static int	get_chunk_size(int size)
 
 static void	push_to_b(t_data *data, int chunk)
 {
-	int	i;
+	int	min;
 
-	i = 0;
+	min = 0;
 	while (data->size_a > 0)
 	{
-		if (data->a[0] <= i)
+		if (data->a[0] <= min)
 		{
 			pb(data);
 			rb(data);
-			i++;
+			min++;
 		}
-		else if (data->a[0] <= i + chunk)
+		else if (data->a[0] <= min + chunk)
 		{
 			pb(data);
-			i++;
+			min++;
 		}
 		else
 			ra(data);
@@ -72,20 +72,20 @@ static void	push_to_b(t_data *data, int chunk)
 
 static void	push_to_a(t_data *data)
 {
-	int	max_idx;
+	int	max;
 	int	cnt;
 
 	while (data->size_b > 0)
 	{
-		max_idx = max_index(data->b, data->size_b);
-		if (max_idx <= data->size_b / 2)
+		max = max_index(data->b, data->size_b);
+		if (max <= data->size_b / 2)
 		{
-			while (max_idx-- > 0)
+			while (max-- > 0)
 				rb(data);
 		}
 		else
 		{
-			cnt = data->size_b - max_idx;
+			cnt = data->size_b - max;
 			while (cnt-- > 0)
 				rrb(data);
 		}
