@@ -20,14 +20,14 @@ void	sort_two(t_data *data)
 
 void	sort_three(t_data *data)
 {
-	int	index;
+	int	max;
 
 	if (data->size_a != 3)
 		return ;
-	index = max_index(data->a, data->size_a);
-	if (index == 0)
+	max = max_index(data->a, data->size_a);
+	if (max == 0)
 		ra(data);
-	else if (index == 1)
+	else if (max == 1)
 		rra(data);
 	if (data->a[0] > data->a[1])
 		sa(data);
@@ -35,20 +35,20 @@ void	sort_three(t_data *data)
 
 void	sort_five(t_data *data)
 {
-	int	min_idx;
+	int	min;
 
 	while (data->size_a > 3)
 	{
-		min_idx = min_index(data->a, data->size_a);
-		if (min_idx <= data->size_a / 2)
+		min = min_index(data->a, data->size_a);
+		if (min <= data->size_a / 2)
 		{
-			while (min_idx-- > 0)
+			while (min-- > 0)
 				ra(data);
 		}
 		else
 		{
-			min_idx = data->size_a - min_idx;
-			while (min_idx-- > 0)
+			min = data->size_a - min;
+			while (min-- > 0)
 				rra(data);
 		}
 		pb(data);
