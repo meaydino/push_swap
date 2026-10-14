@@ -50,4 +50,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re visualizer
+.PHONY: all clean fclean re
